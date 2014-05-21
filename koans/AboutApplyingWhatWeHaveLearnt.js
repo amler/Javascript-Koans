@@ -81,10 +81,17 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
    it("should count the ingredient occurrence (imperative)", function () {
+    
+    // ingredientCount is an object with a property name with the value 0. Using curly braces & turning into a string
+    
     var ingredientCount = { "{ingredient name}": 0 };
 
+      // i = to each product index starting at 0 and counting up though the length of the array whis is 5
     for (i = 0; i < products.length; i+=1) {
+      // second loop where j is the initial index of products where the first iterator hits ingredients
+      // this will iterate through the ingredients array
         for (j = 0; j < products[i].ingredients.length; j+=1) {
+      // .ingredients[j] 
             ingredientCount[products[i].ingredients[j]] = (ingredientCount[products[i].ingredients[j]] || 0) + 1;
         }
     }
